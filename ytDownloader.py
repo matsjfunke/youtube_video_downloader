@@ -1,13 +1,30 @@
-#import pytube libaray 
-from pytube import YouTube 
-from sys import argv
+# Import the necessary libraries
+from pytube import YouTube
+import sys
 
-#argv takes impot from commandline 
-# -> allows us to input link straight in commmand line
-link = argv[1]
-yt = YouTube(link)
+# Check for the correct number of command-line arguments
+if len(sys.argv) != 2:
+    print("Usage: python3 ytDownloader.py <YouTube_URL>")
+    sys.exit(1)
 
-#video infromation
-print("Title: ", yt.title)
-print("Views: ", yt.views)
-print("Length: ", yt.length)
+# Get the YouTube URL from the command-line argument
+link = sys.argv[1]
+
+try:
+    # Create a YouTube object
+    yt = YouTube(link)
+
+    # Video information
+    print("Title: ", yt.title)
+    print("Views: ", yt.views)
+    print("Length: ", yt.length)
+
+    # Download the video in the highest resolution
+    stream = yt.streams.get_highest_resolution()
+    print("Downloading video...")
+    stream.download('/Users/matsfunke/downloads/ytDownloads')
+    print("Video downloaded successfully.")
+
+#check for error
+except Exception as e:
+    print("An error occurred:", str(e))
