@@ -22,7 +22,7 @@ try:
     # Download the video in the highest resolution
     stream = yt.streams.get_highest_resolution()
     print("Downloading video...")
-    stream.download('/Users/matsfunke/downloads/ytDownloads')
+    stream.download('/path/to/storage/dircetory')
     print("Video downloaded successfully.")
 
 #check for error
