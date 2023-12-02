@@ -20,5 +20,5 @@ pip3 install pytube
 3. imput your directory/path (where you want to safe the video) in  line 25:
     stream.download('/path/to/storage/dircetory')
 
-4. Run the script:
+4. Run the script in terminal:
     python3 ytDownloader.py "<YouTube_URL>"
