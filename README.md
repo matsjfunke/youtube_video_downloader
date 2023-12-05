@@ -12,13 +12,20 @@ pip3 install pytube
 ### Usage / How to run the script
 
 1. clone the repository using:
+   
     git clone https://github.com/matsjfunke/youtube_video_downloader.git
 
-2. change into project directory:
-    cd youtube_video_downloader
 
-3. imput your directory/path (where you want to safe the video) in  line 25:
+2. in ytDownloader.py change line 25 to save the video in desired directory:
+    
     stream.download('/path/to/storage/dircetory')
 
-4. Run the script in terminal:
+
+3. termianl into project directory:
+    
+    cd youtube_video_downloader
+
+
+4. Run the script in terminal and input the url of the youtube video:
+    
     python3 ytDownloader.py "<YouTube_URL>"
