@@ -17,7 +17,7 @@ try:
     # Video information
     print("Title: ", yt.title)
     print("Views: ", yt.views)
-    print("Length: ", yt.length)
+    print(f"Length: {yt.length} min")
 
     # Download the video in the highest resolution
     stream = yt.streams.get_highest_resolution()
